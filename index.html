@@ -389,8 +389,17 @@
         function toggleMenu() {
             var links = document.querySelector('.links');
             var buttons = document.querySelector('.buttons');
+            var menuIcon = document.querySelector('.menu-icon');
             links.classList.toggle('active');
             buttons.classList.toggle('active');
+
+
+             // Toggle between hamburger and close icon
+            if (menuIcon.textContent.trim() === '☰') {
+                menuIcon.innerHTML = '&#10005;'; // Close icon
+            } else {
+                menuIcon.innerHTML = '&#9776;'; // Hamburger icon
+            }
         }
 
         function fullsc(element){
