@@ -160,14 +160,14 @@
             
             <a><button class="btn2 readmore"  onclick="showMore(this,this.parentNode.parentNode.parentNode)">Read more ⇓</button></a>
             <a><button class="btn2 readless"  onclick="showLess(this,this.parentNode.parentNode.parentNode)">⇑ Read less</button></a>
-            <a><button class="btnview" onclick="viewon('Todoapp using django','By using To do you can increase productivity, stay focused, and ensure nothing important is overlooked. To do list is an effective way to keep track of daily, weekly, or long-term goals.','images/todo_home_main.png','images/todo_home.png','images/todo_create.png','images/todo_edit.png','images/todo_login.png',)">View Project <ion-icon name="eye"></ion-icon></button></a>
+            <a><button class="btnview" onclick="viewon('Todoapp using django','By using To do you can increase productivity, stay focused, and ensure nothing important is overlooked. To do list is an effective way to keep track of daily, weekly, or long-term goals.','images/todo_home_main.png','images/todo_home.png',)">View Project <ion-icon name="eye"></ion-icon></button></a>
         </div>
 
         </div>
 
         <div class="pcard">
         <div class="card-image"> 
-            <img src="images/ev_home.png" alt="">
+            <img src="images/Ev/ev_home.png" alt="">
         </div>
         <p class="card-title">EV Charging station using django</p>
         <p class="pcard-body" >
@@ -179,7 +179,7 @@
             
             <a><button class="btn2 readmore"  onclick="showMore(this,this.parentNode.parentNode.parentNode)">Read more ⇓</button></a>
             <a><button class="btn2 readless"  onclick="showLess(this,this.parentNode.parentNode.parentNode)">⇑ Read less</button></a>
-            <a><button class="btnview" onclick="viewon('EV Charging station using django','By using this website users can find nearby charging stations, check availability, and make reservations. This service is especially beneficial in busy areas or during peak travel times.','images/ev_home.png','images/ev_login.png','images/ev_signup.png','images/ev_stations.png','images/ev_bookings.png',)">View Project <ion-icon name="eye"></ion-icon></button></a>
+            <a><button class="btnview" onclick="viewon('EV Charging station using django','By using this website users can find nearby charging stations, check availability, and make reservations. This service is especially beneficial in busy areas or during peak travel times.','images/Ev/ev_home.png','images/Ev/ev_home.png','images/Ev/ev_login.png','images/Ev/ev_signup.png','images/Ev/ev_stations.png','images/Ev/ev_bookings.png',)">View Project <ion-icon name="eye"></ion-icon></button></a>
         </div>
 
         </div>
@@ -261,7 +261,7 @@
             <h1 style="color: #b2eccf;;" class="title">PROJECT NAME</h1>
             <h4 class="description">Discription</h4>
             <h4>SCREENSHOTS</h4>
-            <div class="proimgs">
+            <!-- <div class="proimgs">
                 <img class="img1" src="images/project1.png" alt=""  onclick="fullsc(this)">
                 <img class="img2" src="images/project1.png" alt=""  onclick="fullsc(this)">
                 <img class="img3" src="images/project1.png" alt=""  onclick="fullsc(this)">
@@ -269,7 +269,9 @@
                 <img class="img5" src="images/project1.png" alt=""  onclick="fullsc(this)">
                 
 
-            </div>
+            </div> -->
+
+            <div class="proimgs" id="projectImages"></div>
         </div>
     </div>
 
@@ -371,18 +373,58 @@
         function vclose(){
             document.querySelector('.wrapper').style.display = "none"
         }
-        function viewon(name,desc,image1,image2,image3,image4,image5){
-            document.querySelector('.title').innerText = name 
-            document.querySelector('.description').innerText = desc
-            document.querySelector('.img1').src = image1
-            document.querySelector('.img2').src = image2
-            document.querySelector('.img3').src = image3
-            document.querySelector('.img4').src = image4
-            document.querySelector('.img5').src = image5
-            document.querySelector('.wrapper').style.display = "flex"
-            document.querySelector('.title').style.textTransform = "uppercase" 
+        // function viewon(name,desc,image1,image2,image3,image4,image5){
+        //     document.querySelector('.title').innerText = name 
+        //     document.querySelector('.description').innerText = desc
+        //     document.querySelector('.img1').src = image1
+        //     document.querySelector('.img2').src = image2
+        //     document.querySelector('.img3').src = image3
+        //     document.querySelector('.img4').src = image4
+        //     document.querySelector('.img5').src = image5
+        //     document.querySelector('.wrapper').style.display = "flex"
+        //     document.querySelector('.title').style.textTransform = "uppercase" 
 
+        // }
+
+
+        function viewon(name, desc, ...images) {
+
+            document.querySelector('.title').innerText = name;
+            document.querySelector('.description').innerText = desc;
+
+            const projectImages = document.querySelector('#projectImages');
+
+            // Clear previous project images
+            projectImages.innerHTML = '';
+
+            // Add only valid images
+            images.forEach(image => {
+
+                if (image && image.trim() !== '') {
+
+                    const img = document.createElement('img');
+
+                    img.src = image;
+                    img.alt = name + " screenshot";
+                    img.loading = "lazy";
+
+                    // If image is missing/broken, remove it
+                    img.onerror = function () {
+                        this.remove();
+                    };
+
+                    img.onclick = function () {
+                        fullsc(this);
+                    };
+
+                    projectImages.appendChild(img);
+                }
+            });
+
+            document.querySelector('.wrapper').style.display = "flex";
+            document.querySelector('.title').style.textTransform = "uppercase";
         }
+
 
         function showShop(){
             document.querySelector('.shopContainer').scrollIntoView()
