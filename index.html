@@ -497,12 +497,24 @@ Developed a Flutter and Django-based geo-fencing application that automatically 
             }
         }
 
-        function fullsc(element){
-            console.log(111111);
+        // function fullsc(element){
+        //     console.log(111111);
             
-            document.querySelector('.fullscr').style.display = "flex" 
-            document.querySelector('.zoom').src = element.src
+        //     document.querySelector('.fullscr').style.display = "flex" 
+        //     document.querySelector('.zoom').src = element.src
+        // }
+
+
+        function fullsc(element) {
+
+            if (!element || !element.src) {
+                return;
+            }
+
+            document.querySelector('.zoom').src = element.src;
+            document.querySelector('.fullscr').style.display = "flex";
         }
+
         function scrclose(){
             // document.querySelector('.wrapper').style.display = "none"
             document.querySelector('.fullscr').style.display = "none"
