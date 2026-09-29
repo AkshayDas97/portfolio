@@ -12,6 +12,23 @@
 <body onscroll="bodyscroll()">
     
     <div class="container">
+        <!-- Embedded Engineering Floating Button -->
+        <a href="index.html" class="embedded-float">
+
+            <div class="embedded-icon">
+                <i class="fa-solid fa-microchip"></i>
+            </div>
+
+            <div class="embedded-content">
+                <span class="embedded-small">EXPLORE</span>
+                <span class="embedded-title">Full-Stack Developer</span>
+            </div>
+
+            <div class="embedded-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+        </a>
         
         <div class="navbar" >
             <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
@@ -22,7 +39,7 @@
                 <a href="#xperience" onclick="showActivity()" onmouseover="hoveron(this)" onmouseout="hoverout(this)" class="link" style="text-decoration: none;cursor: pointer;">Experience</a>
                 
                 <a href="#news" onmouseover="hoveron(this)" onmouseout="hoverout(this)" class="link" style="text-decoration: none;">Projects</a>
-                <a href="index.html" onclick="showActivity()" onmouseover="hoveron(this)" onmouseout="hoverout(this)" class="link" style="text-decoration: none;cursor: pointer;">Full-Stack</a>
+                <!-- <a href="index.html" onclick="showActivity()" onmouseover="hoveron(this)" onmouseout="hoverout(this)" class="link" style="text-decoration: none;cursor: pointer;">Full-Stack</a> -->
                 <a href="#about" class="link" onmouseover="hoveron(this)" onmouseout="hoverout(this)" style="text-decoration: none;">About</a>
                 <a href="#about" class="link" onmouseover="hoveron(this)" onmouseout="hoverout(this)" style="text-decoration: none;">Contact Me</a>
                 
@@ -146,95 +163,124 @@
         
         <div class="project" data-aos="fade-up" >
 
-       
-        <div class="pcard">
-        <div class="card-image"> 
-            <img src="images/Airgaurd/banner1.png" alt="">
-        </div>
-        <p class="card-title">AirGaurd – Smart Air Quality Monitoring System</p>
-        <p class="pcard-body" >
-            AirGuard is a smart IoT-based air quality monitoring system designed to continuously monitor environmental conditions and detect harmful gases in the surrounding air. Using sensors connected to a NodeMCU/ESP8266, the system collects air quality data and displays real-time readings through a connected monitoring platform. It also provides alerts when gas levels exceed predefined safety limits, helping users identify potentially unsafe air conditions quickly.
-        </p>
+            
+            <div class="pcard">
+                <div class="card-image"> 
+                    <img src="images/Airgaurd/banner1.png" alt="">
+                </div>
+                <p class="card-title">AirGaurd – Smart Air Quality Monitoring System</p>
+                <p class="pcard-body" >
+                    AirGuard is a smart IoT-based air quality monitoring system designed to continuously monitor environmental conditions and detect harmful gases in the surrounding air. Using sensors connected to a NodeMCU/ESP8266, the system collects air quality data and displays real-time readings through a connected monitoring platform. It also provides alerts when gas levels exceed predefined safety limits, helping users identify potentially unsafe air conditions quickly.
+                </p>
+                
+                <div class="btns">
+                    
+                    <a><button class="btn2 readmore"  onclick="showMore(this,this.parentNode.parentNode.parentNode)">Read more ⇓</button></a>
+                    <a><button class="btn2 readless"  onclick="showLess(this,this.parentNode.parentNode.parentNode)">⇑ Read less</button></a>
+                    <a><button class="btnview" onclick="viewon('AirGaurd – Smart Air Quality Monitoring System','AirGuard is a smart IoT-based air quality monitoring system designed to continuously monitor environmental conditions and detect harmful gases in the surrounding air. Using sensors connected to a NodeMCU/ESP8266, the system collects air quality data and displays real-time readings through a connected monitoring platform. It also provides alerts when gas levels exceed predefined safety limits, helping users identify potentially unsafe air conditions quickly.','images/Airgaurd/homepage.jpeg','images/Airgaurd/instruction.jpeg','images/Airgaurd/warning.jpeg','images/Airgaurd/circuit.jpeg')">View Project <ion-icon name="eye"></ion-icon></button></a>
+                </div>
+                
+            </div>
+
+            
+            <div class="pcard">
+            <div class="card-image"> 
+                <img src="images/Glucometer/gluco banner.png" alt="">
+            </div>
+            <p class="card-title">GlucoFusion AI-Powered Non-Invasive Glucose Monitoring System</p>
+            <p class="pcard-body" >
+                GlucoFusion is an AI-powered non-invasive glucose monitoring system that combines PPG and breath acetone sensing to estimate blood glucose levels without finger-prick testing. Using multimodal data fusion and machine learning models such as CNN-GRU and LightGBM, it classifies glucose levels as Low, Normal, or High and provides personalized health recommendations. A Django-based dashboard enables real-time monitoring, trend visualization, and historical analysis.
+    
+            </p>
+           
+            <div class="btns">
+                
+                <a><button class="btn2 readmore"  onclick="showMore(this,this.parentNode.parentNode.parentNode)">Read more ⇓</button></a>
+                <a><button class="btn2 readless"  onclick="showLess(this,this.parentNode.parentNode.parentNode)">⇑ Read less</button></a>
+                <a><button class="btnview" onclick="viewon('GlucoFusion AI-Powered Non-Invasive Glucose Monitoring System',
+                'GlucoFusion: An AI-Powered Non-Invasive Glucose Monitoring System is an innovative healthcare solution designed to estimate blood glucose levels without invasive finger-prick methods. The system integrates dual physiological sensing techniques using a  Photoplethysmography (PPG) sensor and an  breath acetone sensor to collect real-time biometric data correlated with glucose concentration. The acquired signals undergo preprocessing, feature extraction, and multimodal fusion before being analyzed using advanced machine learning models such as CNN-GRU for PPG signal interpretation and LightGBM for breath acetone analysis. The fused model predicts glucose levels and classifies them into Low, Normal, or High categories with improved accuracy compared to single-sensor systems. A key component of the system is an intelligent recommendation engine that provides personalized health suggestions based on predicted glucose levels. Depending on the classification, the system generates tailored guidance related to diet, physical activity, hydration, and precautionary measures, thereby supporting proactive diabetes management. The system is implemented using an  microcontroller for sensor data acquisition and a web-based dashboard developed with Django for real-time visualization, trend monitoring, and historical analysis. Additionally, a continuous feedback mechanism enables adaptive learning, allowing the model to improve its predictive performance over time. GlucoFusion aims to provide a portable, cost-effective, user-friendly, and scalable solution for continuous glucose monitoring, enhancing patient comfort and promoting intelligent, data-driven healthcare management',
+                'images/Glucometer/gluco banner.png',
+                'images/Glucometer/circuit.jpeg',
+                // 'images/Glucometer/gluco_list.png',
+                // 'images/Glucometer/gluco_book.png',
+                // 'images/Glucometer/gluco_mybookings.png',
+                )">View Project <ion-icon name="eye"></ion-icon></button></a>
+            </div>
+    
+            </div>
+            <div class="pcard">
+                <div class="card-image"> 
+                    <img src="images/Smart School Bus/school banner.png" alt="">
+                </div>
+                <p class="card-title">Smart School Bus</p>
+                <p class="pcard-body" >
+                Smart School Bus is an IoT-based safety and student monitoring system designed to improve the security of school transportation. The system uses Arduino and NodeMCU as the main controllers, along with an RFID reader to record student entry into the bus. A tilt sensor continuously monitors the bus for abnormal tilting that may indicate an accident. In the event of an accident, the system uses a GPS module to obtain the bus's current coordinates and sends the location information to the principal's mobile phone through a dedicated application. This enables quick awareness of emergencies and supports timely response, while RFID-based attendance provides better monitoring of students during transportation.                    
+                </p>
        
         <div class="btns">
             
             <a><button class="btn2 readmore"  onclick="showMore(this,this.parentNode.parentNode.parentNode)">Read more ⇓</button></a>
             <a><button class="btn2 readless"  onclick="showLess(this,this.parentNode.parentNode.parentNode)">⇑ Read less</button></a>
-            <a><button class="btnview" onclick="viewon('AirGaurd – Smart Air Quality Monitoring System','AirGuard is a smart IoT-based air quality monitoring system designed to continuously monitor environmental conditions and detect harmful gases in the surrounding air. Using sensors connected to a NodeMCU/ESP8266, the system collects air quality data and displays real-time readings through a connected monitoring platform. It also provides alerts when gas levels exceed predefined safety limits, helping users identify potentially unsafe air conditions quickly.','images/Airgaurd/homepage.jpeg','images/Airgaurd/instruction.jpeg','images/Airgaurd/circuit.jpeg')">View Project <ion-icon name="eye"></ion-icon></button></a>
+            <a><button class="btnview" onclick="viewon('Smart School Bus',
+            'Smart School Bus is an IoT-based safety and student monitoring system designed to improve the security of school transportation. The system uses Arduino and NodeMCU as the main controllers, along with an RFID reader to record student entry into the bus. A tilt sensor continuously monitors the bus for abnormal tilting that may indicate an accident. In the event of an accident, the system uses a GPS module to obtain the bus current coordinates and sends the location information to the principal mobile phone through a dedicated application. This enables quick awareness of emergencies and supports timely response, while RFID-based attendance provides better monitoring of students during transportation.',
+            'images/Smart School Bus/pic6.jpeg',
+            'images/Smart School Bus/pic1.jpeg',
+            'images/Smart School Bus/pic2.jpeg',
+            'images/Smart School Bus/pic3.jpeg',
+            'images/Smart School Bus/pic4.jpeg',
+            'images/Smart School Bus/pic5.jpeg',
+            
+            )">View Project <ion-icon name="eye"></ion-icon></button></a>
+        </div>
+
+        </div>
+
+
+        <div class="pcard">
+        <div class="card-image"> 
+            <img src="images/SmartShoe/smart banner.png" alt="">
+        </div>
+        <p class="card-title">SmartShoe</p>
+        <p class="pcard-body" >
+SmartShoe is an embedded assistive technology designed to improve the mobility and safety of visually impaired individuals. The system uses an Arduino Nano as its main controller and integrates multiple sensors to detect potential hazards while walking. Ultrasonic sensors identify obstacles in front of the user and help detect changes such as upward and downward steps. A continuity sensor detects water on the walking surface, helping the user avoid wet areas. Additionally, a tilt sensor detects when the user falls and activates a buzzer to provide an alert. The system uses different buzzer patterns for different detected conditions, allowing the user to distinguish between obstacles, steps, water, and falls. Overall, SmartShoe provides a compact, affordable, and practical solution for safer and more independent mobility.        </p>
+       
+        <div class="btns">
+            
+            <a><button class="btn2 readmore"  onclick="showMore(this,this.parentNode.parentNode.parentNode)">Read more ⇓</button></a>
+            <a><button class="btn2 readless"  onclick="showLess(this,this.parentNode.parentNode.parentNode)">⇑ Read less</button></a>
+            <a><button class="btnview" onclick="viewon('SmartShoe',
+            'SmartShoe is an embedded assistive technology designed to improve the mobility and safety of visually impaired individuals. The system uses an Arduino Nano as its main controller and integrates multiple sensors to detect potential hazards while walking. Ultrasonic sensors identify obstacles in front of the user and help detect changes such as upward and downward steps. A continuity sensor detects water on the walking surface, helping the user avoid wet areas. Additionally, a tilt sensor detects when the user falls and activates a buzzer to provide an alert. The system uses different buzzer patterns for different detected conditions, allowing the user to distinguish between obstacles, steps, water, and falls. Overall, SmartShoe provides a compact, affordable, and practical solution for safer and more independent mobility.',
+            'images/SmartShoe/project.png',
+            'images/SmartShoe/side.jpeg',
+            'images/SmartShoe/side view.jpeg',
+            'images/SmartShoe/front view.jpeg',
+            'images/SmartShoe/final out.jpeg'
+            )">View Project <ion-icon name="eye"></ion-icon></button></a>
         </div>
 
         </div>
 
         <div class="pcard">
         <div class="card-image"> 
-            <img src="images/Ev/ev_home.png" alt="">
+            <img src="images/SmartDripping/smart banner.png" alt="">
         </div>
-        <p class="card-title">EV Charging station using django</p>
+        <p class="card-title">Smart Dripping System</p>
         <p class="pcard-body" >
-            By using this website users can find nearby charging stations, check availability, and make reservations. This service is especially beneficial in busy areas or during peak travel times.
-
-        </p>
+Smart Dripping System is an automated plant irrigation system designed to maintain optimal soil moisture while reducing unnecessary water usage. The system uses an Arduino Uno as the main controller and a soil moisture sensor to continuously monitor the moisture level of the soil. When the moisture level falls below a predefined threshold, the system automatically activates the corresponding solenoid valve to supply water through the connected hose. An LCD display provides real-time information about the soil moisture level and the status of the solenoid valve. The system also supports IoT-based control, allowing users to remotely operate the solenoid valve through a mobile application. Additionally, a dedicated switch enables the user to change from automatic mode to manual mode, providing flexible control over the irrigation process.        </p>
        
         <div class="btns">
             
             <a><button class="btn2 readmore"  onclick="showMore(this,this.parentNode.parentNode.parentNode)">Read more ⇓</button></a>
             <a><button class="btn2 readless"  onclick="showLess(this,this.parentNode.parentNode.parentNode)">⇑ Read less</button></a>
-            <a><button class="btnview" onclick="viewon('EV Charging station using django','By using this website users can find nearby charging stations, check availability, and make reservations. This service is especially beneficial in busy areas or during peak travel times.','images/Ev/ev_home.png','images/Ev/ev_home.png','images/Ev/ev_login.png','images/Ev/ev_signup.png','images/Ev/ev_stations.png','images/Ev/ev_bookings.png',)">View Project <ion-icon name="eye"></ion-icon></button></a>
-        </div>
-
-        </div>
-
-        <div class="pcard">
-        <div class="card-image"> 
-            <img src="images/turf_home_main.png" alt="">
-        </div>
-        <p class="card-title">Turf booking using django</p>
-        <p class="pcard-body" >
-            By using this website users can find nearby turfs, check availability, and make reservations. This service is especially beneficial in busy areas.
-
-        </p>
-       
-        <div class="btns">
-            
-            <a><button class="btn2 readmore"  onclick="showMore(this,this.parentNode.parentNode.parentNode)">Read more ⇓</button></a>
-            <a><button class="btn2 readless"  onclick="showLess(this,this.parentNode.parentNode.parentNode)">⇑ Read less</button></a>
-            <a><button class="btnview" onclick="viewon('Turf booking using django','By using this website users can find nearby turfs, check availability, and make reservations. This service is especially beneficial in busy areas.','images/turf_home_main.png','images/turf_asturf.png','images/turf_list.png','images/turf_book.png','images/turf_mybookings.png',)">View Project <ion-icon name="eye"></ion-icon></button></a>
-        </div>
-
-        </div>
-
-        <div class="pcard">
-        <div class="card-image"> 
-            <img src="images/gym_home.png" alt="">
-        </div>
-        <p class="card-title">Wellnessflow (GYM Management Project) using django</p>
-        <p class="pcard-body" >
-            Wellnessflow is a comprehensive website designed to streamline the management of fitness and health clubs, offering features like membership registration, personalized goal setting, diet and exercise plans, and QR-based attendance tracking. It enhances user engagement with motivational content, feedback options, and event management for a seamless fitness experience.
-        </p>
-       
-        <div class="btns">
-            
-            <a><button class="btn2 readmore"  onclick="showMore(this,this.parentNode.parentNode.parentNode)">Read more ⇓</button></a>
-            <a><button class="btn2 readless"  onclick="showLess(this,this.parentNode.parentNode.parentNode)">⇑ Read less</button></a>
-            <a><button class="btnview" onclick="viewon('Wellnessflow (GYM Management Project) using django','Wellnessflow is a comprehensive website designed to streamline the management of fitness and health clubs, offering features like membership registration, personalized goal setting, diet and exercise plans, and QR-based attendance tracking. It enhances user engagement with motivational content, feedback options, and event management for a seamless fitness experience.','images/gym_home.png','images/gym_event.png','images/gym_attendance.png','images/gym-booking.png','images/gym_videos.png',)">View Project <ion-icon name="eye"></ion-icon></button></a>
-        </div>
-
-        </div>
-
-        <div class="pcard">
-        <div class="card-image"> 
-            <img src="images/earms_home.png" alt="">
-        </div>
-        <p class="card-title">E-ARMs (Charity Project) using django</p>
-        <p class="pcard-body" >
-            The E-Arms project is a charitable platform connecting donors with orphanages and institutions in need, facilitating donations of food, clothing, and daily essentials. Through a streamlined system, guides help deliver resources, ensuring support reaches those who need it most.
-        </p>
-       
-        <div class="btns">
-            
-            <a><button class="btn2 readmore"  onclick="showMore(this,this.parentNode.parentNode.parentNode)">Read more ⇓</button></a>
-            <a><button class="btn2 readless"  onclick="showLess(this,this.parentNode.parentNode.parentNode)">⇑ Read less</button></a>
-            <a><button class="btnview" onclick="viewon('E-ARMs (Charity Project) using django','The E-Arms project is a charitable platform connecting donors with orphanages and institutions in need, facilitating donations of food, clothing, and daily essentials. Through a streamlined system, guides help deliver resources, ensuring support reaches those who need it most.','images/earms_home.png','images/earms_donation.png','images/earms_request.png','images/earms_requestd.png','images/earms_feedback.png',)">View Project <ion-icon name="eye"></ion-icon></button></a>
+            <a><button class="btnview" onclick="viewon('Smart Dripping System',
+            'Smart Dripping System is an automated plant irrigation system designed to maintain optimal soil moisture while reducing unnecessary water usage. The system uses an Arduino Uno as the main controller and a soil moisture sensor to continuously monitor the moisture level of the soil. When the moisture level falls below a predefined threshold, the system automatically activates the corresponding solenoid valve to supply water through the connected hose. An LCD display provides real-time information about the soil moisture level and the status of the solenoid valve. The system also supports IoT-based control, allowing users to remotely operate the solenoid valve through a mobile application. Additionally, a dedicated switch enables the user to change from automatic mode to manual mode, providing flexible control over the irrigation process.',
+            'images/SmartDripping/project.png',
+            'images/SmartDripping/pic1.jpeg',
+            'images/SmartDripping/pic2.jpeg',
+            'images/SmartDripping/pic3.jpeg',
+            'images/SmartDripping/pic4.jpeg',
+   
+            )">View Project <ion-icon name="eye"></ion-icon></button></a>
         </div>
 
         </div>
@@ -245,7 +291,8 @@
            
         <footer id="about" class="about" data-aos="fade-up" >
             <h2 >About Me</h2>
-            <p >To leverage my experise in both front-end and back-end development to build scalable,efficient, and user-friendly web applications. Seeking a challenging position where I can contribute to innovative projects,collabrate with cross-functional teams, and continually expand my technical skills. </p>
+            <p >To leverage my knowledge and practical experience in electronics, embedded systems, and IoT to develop innovative and reliable hardware-software solutions. I am passionate about working with microcontrollers, sensors, embedded programming, and smart connected systems. Seeking an opportunity where I can apply my technical skills, contribute to real-world embedded projects, collaborate with cross-functional teams, and continuously expand my expertise in embedded technologies.
+                 </p>
             <div class="team" >
                 <h4 style="color: white;opacity: 0.8;">akshaydas097@gmail.com </h4>
                 <h4 style="color: white;opacity: 0.8;">+91 8281957973 </h4>
